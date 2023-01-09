@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <!-- <link rel="stylesheet" href="stu.css"> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
+
+   <style>
+    .book-tab{
+        border:2px solid black;
+    }
+  </style>
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-dark">
+        <div class="container">
+          <a class="nav-link active" href="stu_final.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+              <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+            </svg>
+            </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar1"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav nav nav-fill w-100">
+              <li class="nav-item">
+                <div class="col-xl p-2">
+                  <div class="input-group">
+                      <div class="input-group-btn search-panel">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                              <span id="search_concept">Filter by</span> 
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">ARTIFICIAL INTELLIGENCE</a></li>
+                            <li><a href="#its_equal">CLOUD COMPUTING</a></li>
+                            <li><a href="#greather_than">DATA SCIENCE</a></li>
+                            <li><a href="#less_than">DATA ANALYTIcS</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">AGRICULTURE</a></li>
+                          </ul>
+                      </div>
+                    <!-- </div> -->
+                  <!-- </div> -->
+                  <!-- </li> -->
+              
+              <!-- <li class="nav-item"> -->
+                    <div class="input-group">
+                      <input type="hidden" name="search_param" value="all" id="search_param">         
+                      <input type="text" class="form-control" name="x" placeholder="Search projects...">
+                      <span class="input-group-btn">
+                          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                      </span>
+                  </div>
+              <!-- </div> -->
+            </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" href="stu_ideas.html" >
+                  Your Project Ideas</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle ml-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg> 
+                  </a>
+                    <div class="dropdown-menu mr-8" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">My profile</a>
+                      <a class="dropdown-item" href="#">My account</a>
+                      <a class="dropdown-item" href="#">My acheivements</a>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+              
+
+              <div class="container-fluid main" style="padding-top:32px">  
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" style="max-height:625px">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100 mx-auto" src="https://media.istockphoto.com/id/817972136/photo/education-and-business-background.jpg?s=612x612&w=0&k=20&c=GTVoTrSKzFiptpCaccBoDLBkE-80AUwXkUsqkjyToOU=" alt="First slide" style="max-width:80%">
+                        <div class="carousel-caption d-none d-md-block mb-5">
+                            <h5>CLOUD COMPUTING</h5>
+                            <!-- <p></p> -->
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100 mx-auto" src="https://media.istockphoto.com/id/925425860/photo/in-laboratory-scientist-wearing-virtual-reality-headset-sitting-in-a-chair-interacts-with.jpg?s=612x612&w=0&k=20&c=H6F3YaSVso1qpZuExxJEui1zsc1vUePtsSlF690YYD0=" alt="Second slide" style="max-width: 80%;">
+                        <div class="carousel-caption d-none d-md-block mb-5">
+                            <h5>VIRTUAL REALITY</h5>
+                            <!-- <p>...</p> -->
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100 mx-auto" src="https://media.istockphoto.com/id/1205195628/photo/3d-illustration-technology-hexagon-background-and-data-artificial-intelligence-algorithms.jpg?s=612x612&w=0&k=20&c=ez1zrD17SO_XmYdpGqylhMDO1MteJX4DY9GX3rEjcrw=" alt="Third slide" style="max-width: 80%;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>DATA SCIENCE</h5>
+                            <!-- <p>...</p> -->
+                          </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                
+                <h1 class="text-center" style="padding-top: 15%;padding-bottom: 5%; font-weight: 600;">AVAILABLE CATEGORIES</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!-- <h1 class="text-center">Topic 1</h1> -->
+                        <a href="stu_viewmore.html">
+                        <div class="text-center shadow p-3 mb-5 bg-white rounded" >
+                            <!-- <div> -->
+                              <!-- <img src="https://miro.medium.com/max/1400/1*cG6U1qstYDijh9bPL42e-Q.jpeg" class="img-fluid" alt=""> -->
+                              <img src="https://media.istockphoto.com/id/1223301957/photo/artificial-intelligence-technology.jpg?s=612x612&w=0&k=20&c=3GSFioDKwb8jSN0lH-ZmMyiA66dzw6kkQV3Hjd0SNU4=" class="img-fluid" alt="">    
+                            <!-- </div> -->
+                            <div>
+                              <h5>
+                                <span style="font-weight:600">MACHINE </span>LEARNING
+                              </h5>
+                            </div>
+                        </div>
+                        </a>
+                    </div>    
+
+                    <div class="col-sm-4">
+                        <!-- <h1 class="text-center">Topic 2</h1> -->
+                        <div class="text-center shadow p-3 mb-5 bg-white rounded" >
+                          <img src="https://media.istockphoto.com/id/1345658982/photo/ai-microprocessor-on-motherboard-computer-circuit.jpg?s=612x612&w=0&k=20&c=Kah6k5RDjasNEzJMjr8kSuYNN5LJ3CKTz4ZGLiCW2Fs=" class="img-fluid" alt="">
+                          <!-- <img src="https://media.istockphoto.com/id/1223301957/photo/artificial-intelligence-technology.jpg?s=612x612&w=0&k=20&c=3GSFioDKwb8jSN0lH-ZmMyiA66dzw6kkQV3Hjd0SNU4=" class="img-fluid" alt=""> -->
+                          <!-- <img src="https://media.istockphoto.com/id/1172878142/photo/ai-concept-electronic-circuit-communication-network.jpg?s=612x612&w=0&k=20&c=P4Az2DW635v7QAWBRvnGuSi36yVf9oABvbDScXhGQWE=" class="img-fluid" alt=""> -->
+                          <div>
+                            <h5>
+                              <span style="font-weight:600">ARTIFICIAL </span>INTELLIGENCE
+                            </h5>
+                          </div>
+                        </div>    
+                    </div>
+
+                    <div class="col-sm-4">
+                        <!-- <h1 class="text-center">Topic 3</h1> -->
+                            <div class="text-center shadow p-3 mb-5 bg-white rounded" >
+                              <!-- <img src="https://media.istockphoto.com/id/1399388631/photo/teamwork-in-the-office-with-massive-data.jpg?s=612x612&w=0&k=20&c=2z0jpTL-I3Pec3bTKnkNJJqd0Dbr1dX4ivf49xGq2ZU=" class="img-fluid" alt=""> -->
+                              <img src="https://media.istockphoto.com/id/1398626478/photo/global-business-finance-gdp-graph-chart-report-stock-exchange-market-trading-investment-and.jpg?s=612x612&w=0&k=20&c=LaoYFmR5KqhHPrC7z2UdbvqmE19aie6QtrFS29qBwkE=" class="img-fluid" alt="">
+                              <div>
+                                <h5>
+                                  <span style="font-weight:600">DATA </span>SCIENCE
+                                </h5>
+                              </div>
+                            </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                      <div class="text-center shadow p-3 mb-5 bg-white rounded" >
+                        <img src="https://media.istockphoto.com/id/1145589623/photo/cloud-computing.jpg?s=612x612&w=0&k=20&c=8J35wj6OztvdGxiRLDTloq7IgoJDT5GvzOgT34_gS0M=" class="img-fluid" alt="">
+                        <div>
+                          <h5>
+                            <span style="font-weight:600">CLOUD </span>COMPUTING
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <div class="text-center shadow p-3 mb-5 bg-white rounded" >
+                        <img src="https://media.istockphoto.com/id/1152502981/photo/turkish-student-group-are-developing-the-robot-in-the-classrom.jpg?s=612x612&w=0&k=20&c=_gv59WkLFNLkwA5pl0n5tWX4CAwAsV6XdMt2UsGj5aw=" class="img-fluid" alt="">
+                        <div>
+                          <h5>
+                            <span style="font-weight:600">ROBO</span>TICS
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <div class="text-center shadow p-3 mb-5 bg-white rounded" >
+                        <img src="https://media.istockphoto.com/id/907966126/photo/tractor-spraying-pesticides-on-vegetable-field-with-sprayer-at-spring.jpg?s=612x612&w=0&k=20&c=rxWT-PjibwcLsIUu4Zd-pa_zTdISmaoth0rjgLCURSg=" class="img-fluid" alt="">
+                        <div>
+                          <h5>
+                            <span style="font-weight:600">AGRI</span>CULTURE
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <h2>FOLLOW US</h2>
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-facebook"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab bi bi-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab bi bi-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab bi bi-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab bi bi-linkedin"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab bi bi-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <!-- <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div> -->
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <!-- <div class="col-md-5 col-12"> -->
+              <!-- Email input -->
+              <!-- <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div> -->
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <!-- <div class="col-auto"> -->
+              <!-- Submit button -->
+              <!-- <button type="submit" class="btn btn-outline-light mb-4"> -->
+                <!-- Subscribe -->
+              <!-- </button> -->
+            <!-- </div> -->
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      <!-- <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section> -->
+      <!-- Section: Text -->
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <!-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div> -->
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <!-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div> -->
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">DETAILS</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">About us</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Privacy Policy</a>
+              </li>
+              <!-- <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li> -->
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">COntact us</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">+91 9876543210</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Email: mail@mail.com</a>
+              </li>
+              <!-- <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li> -->
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="">Akova.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
